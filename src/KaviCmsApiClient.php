@@ -20,8 +20,8 @@ class KaviCmsApiClient implements IKaviCmsApiClient
 
     public function __construct()
     {
-        $this->auth = Http::baseUrl(env('KAVICMS_AUTH_URL', 'http://3.255.242.198:8092'));
-        $this->api = Http::baseUrl(env('KAVICMS_API_URL', 'http://54.73.124.167:8091'))->withToken($this->getToken());
+        $this->auth = Http::baseUrl(env('KAVICMS_AUTH_URL', 'http://auth.kavicms.com'));
+        $this->api = Http::baseUrl(env('KAVICMS_API_URL', 'http://api.kavicms.com'))->withToken($this->getToken());
     }
 
     function getToken(): string
